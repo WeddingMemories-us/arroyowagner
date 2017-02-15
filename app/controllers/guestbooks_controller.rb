@@ -30,6 +30,7 @@ class GuestbooksController < ApplicationController
       if @guestbook.save
         format.html { redirect_to @guestbook, notice: 'Guestbook was successfully created.' }
         format.json { render :show, status: :created, location: @guestbook }
+        OwnersMailer.new_message.deliver
       else
         format.html { render :new }
         format.json { render json: @guestbook.errors, status: :unprocessable_entity }
