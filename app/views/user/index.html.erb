@@ -1,0 +1,42 @@
+<div class="container-fluid">
+	<h1 class="title" style="margin-bottom: 5px">Guest List</h1>
+	<br>
+	<div class="row">
+		<% @users.each do |guest| %>
+			<% if guest.rsvp == true %>
+				<div class="col-xs-3">
+					<div class="panel panel-default panel-turq">
+						<div class="panel-heading">
+							<strong><%= guest.name %> <br>
+							RSVP: </strong><%= guest.rsvp.to_s.humanize %>
+						</div>
+						<div class="panel-body">
+							<ul>
+								<li>Email: <%= guest.email %></li>
+								<li>Adults: <%= guest.adults %></li>
+								<li>Children: <%= guest.children %></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			<% end %>
+		<% end %>
+		<% @users.each do |guest| %>
+			<% if guest.rsvp == false %>
+				<div class="col-xs-3">
+					<div class="panel panel-default panel-turq">
+						<div class="panel-heading">
+							<strong><%= guest.name %><br>
+							RSVP:</strong><%= guest.rsvp.to_s.humanize %>
+						</div>
+						<div class="panel-body">
+							<ul>
+								<li>Email: <%= guest.email %></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			<% end %>
+		<% end %>
+	</div>
+</div>

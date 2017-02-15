@@ -1,0 +1,28 @@
+<%= form_for(guestbook) do |f| %>
+  <% if guestbook.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(guestbook.errors.count, "error") %> prohibited this guestbook from being saved:</h2>
+
+      <ul>
+      <% guestbook.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="cant-see-me">
+    <%= f.number_field :user_id, value: current_user.id %>
+  </div>
+  <div class="container-fluid">
+    <form class="form-horizontal">
+      <div class="form-group">
+        <%= f.text_area :message, placeholder: "Leave a message for the bride and groom.", class: "big-forms submit" %>
+        <br>
+        <%= f.submit :class => "submit btn-semi-mini leave-message" %>
+      </div>
+    </form>
+  </div>
+
+<% end %>
+

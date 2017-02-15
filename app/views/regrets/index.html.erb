@@ -1,0 +1,25 @@
+<div class="container-fluid">
+  <p id="notice"><%= notice %></p>
+  <h1 class="title">Well Wishes </h1>
+  <%= paginate @regrets %>
+  <div class="row">
+    <% @regrets.each do |regret| %>
+      <div class="col-xs-12">
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <%= regret.user.name %> said:
+          </div>
+          <div class="panel-body panel-turq">
+            <%= simple_format(regret.message[0..250]) %>...<%= link_to "Read More", regret %>
+          </div>
+
+          <div class="panel-footer panel-turq">
+            <% if current_user.id == regret.user.id %>
+              <%= link_to "Edit", edit_regret_path(regret), class: "btn btn-default" %>
+            <% end %>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>

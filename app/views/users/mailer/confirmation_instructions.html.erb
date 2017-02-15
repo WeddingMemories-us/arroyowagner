@@ -1,0 +1,13 @@
+<p>Welcome <%= @user.name %>!</p>
+
+<p>Your RSVP for Jessica and William's wedding has been stored. In order for you to continue using the site on the day of the wedding as a guestbook, you need to confirm your email address.</p>
+
+<p>You can confirm your account email through the link below:</p>
+
+<button type='button' style="background-color: #80d7d7;" ><%= link_to 'Confirm my account', confirmation_url(@resource, confirmation_token: @token), style: "color: #ffffff" %></button>
+
+<p style="float: right;">Thank you,<br> Wedding Memories Staff</p>
+
+
+
+

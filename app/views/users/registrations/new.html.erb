@@ -1,0 +1,55 @@
+<script type="text/javascript">
+function checkRsvp(){
+  if(document.getElementById("user_rsvp").checked){
+    document.getElementsByName("commit")[0].value="Submit RSVP";
+    document.getElementById("user_adults").className = "see-me";
+    document.getElementById("user_children").className = "see-me";
+  } else {
+    document.getElementsByName("commit")[0].value="Send Regrets";
+    document.getElementById("user_adults").className = "cant-see-me";
+    document.getElementById("user_children").className = "cant-see-me";
+  }
+}
+</script>
+
+
+<div class="container-fluid">
+  <h1 class="title">RSVP and Registration</h1>
+  
+  <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+    <%= devise_error_messages! %>
+
+    <div class="form-group">
+      <%= f.email_field :email, autofocus: true, placeholder: "Email", class: "sm-forms submit" %>
+    </div>
+
+    <div class="form-group">
+      <%= f.text_field :name, autofocus: true, placeholder: "Name", class: "sm-forms submit" %>
+    </div>
+
+    <div class="form-group">
+      <%= f.password_field :password, autocomplete: "off", placeholder: "Password ("+@minimum_password_length.to_s+" characters minimum)", class: "sm-forms submit" %>
+    </div>
+
+    <div class="form-group">
+      <%= f.password_field :password_confirmation, autocomplete: "off", placeholder: "Re-enter Your Password", class: "sm-forms submit" %>
+    </div>
+    <br>
+    <div class="checkbox" align="left" style="padding-left: 47%">
+      <%= f.check_box :rsvp, {:onclick => "checkRsvp()"}, "true", "false" %>
+      <%= f.label :rsvp, "RSVP", class: "sm-text ", style: "display:inline;" %>
+    </div>
+    <div class="form-group" align="left" style="padding-left: 46%">
+      <%= f.select :adults, options_for_select((1..10).step(1)), {:prompt => "How many adults?"}, {class: "cant-see-me"} %> <br>
+      <%= f.select :children, options_for_select((1..10).step(1)), {:prompt => "How many children?"}, {class: "cant-see-me"} %>
+    </div>
+    <br>
+    <div>
+      <%= f.submit "Send Regrets", :class => 'btn btn-semi-mini submit' %>
+    </div>
+  <% end %>
+  <br>
+  <%= link_to "Log In", new_session_path(resource_name), class: "btn btn-semi-mini submit" %>
+</div>
+
+

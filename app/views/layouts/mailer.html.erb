@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<style type="text/css">
+	    /* /\/\/\/\/\/\/\/\/ RESET STYLES /\/\/\/\/\/\/\/\/ */
+	    body{
+	        margin:0;
+	        padding:0;
+	    }
+
+	    img{
+	        border:0 none;
+	        height:auto;
+	        line-height:100%;
+	        outline:none;
+	        text-decoration:none;
+	    }
+
+	    a img{
+	        border:0 none;
+	    }
+
+	    .imageFix{
+	        display:block;
+	    }
+
+	    table, td{
+	        border-collapse:collapse;
+	    }
+
+	    #bodyTable{
+	        height:100% !important;
+	        margin:0;
+	        padding:0;
+	        width:100% !important;
+	    }
+	</style>    
+  </head>
+
+  <body>
+  	<div>
+		<table>
+			<tr style="height:50px;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+			<tr>
+				<td style="width:10%;">&nbsp;</td>
+				<td>
+					<div style="width:100%; -moz-box-shadow: inset 0 0 50px #80d7d7; -webkit-box-shadow: inset 0 0 50px #80d7d7; box-shadow: inset 0 0 50px #80d7d7;">
+						<div id="header" style="width:100%; height:50px;">
+							<img style="float:right;" src="http://icons.iconarchive.com/icons/aha-soft/free-large-love/48/Wedding-Rings-icon.png">
+						</div>
+						<div style="width:100%;">
+							<table style="width:100%;">
+								<tr id="body" style="width:100%">
+									<td id="left-spacer" style="width:10%">&nbsp;</td>
+									<td id="content" style="width:80%">
+    									<%= yield %>
+    								</td>
+									<td id="rightspacer" style="width:10%">&nbsp;</td>
+								</tr>
+							</table>
+						</div>
+						<div id="footer" style="width:100%; height:50px; valign:bottom;">
+							<br/>&copy;2017 Wedding Memories
+						</div>
+					</div>
+				</td>
+				<td style="width:10%;">&nbsp;</td>
+			</tr>
+			<tr style="height:50px;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+		</table>
+	</div>
+  </body>
+</html>

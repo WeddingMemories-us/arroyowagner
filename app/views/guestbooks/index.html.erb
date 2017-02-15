@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<div class="container-fluid">
+  <h2 class="title">Messages for Jessica and William</h2>
+
+    <%= link_to 'Leave a Note', new_guestbook_path, class: 'btn btn-default' %>
+  <br>
+  <%= paginate @guestbooks %>
+  <div class="row">
+    <% @guestbooks.each do |guestbook| %>
+      <div class="col-xs-12">
+        <div class="panel panel-default">
+          <div class="panel-heading panel-turq">
+            <%= guestbook.user.name %> says:
+          </div>
+          <div class="panel-body panel-turq">
+            <%= guestbook.message[0..250] %>... <%= link_to 'Read More', guestbook %>
+          </div>
+          <% if current_user.id == guestbook.user.id %>
+            <div class="panel-footer panel-turq">
+              <div class="btn-group btn-group-small">
+                <% if current_user.id == guestbook.user.id %>
+                  <%= link_to 'Edit', edit_guestbook_path(guestbook), class: 'btn btn-default' %>
+                <% end %>
+              </div>
+            </div>
+          <% end %>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>
+
+
