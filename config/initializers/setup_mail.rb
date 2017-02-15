@@ -4,7 +4,7 @@ ActionMailer::Base.smtp_settings = {
   :port                 	=>  '587',
   :authentication       	=>  :plain,
   :user_name            	=>  'mary@weddingmemories.us',
-  :password             	=>  'Alexzander12',
+  :password             	=>  'mgbcjbwtppaoapwj',
   :domain               	=>  'weddingmemories.us',
   :enable_starttls_auto  	=>  true
 }
