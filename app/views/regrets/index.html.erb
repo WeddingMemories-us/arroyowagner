@@ -16,6 +16,7 @@
           <div class="panel-footer panel-turq">
             <% if current_user.id == regret.user.id %>
               <%= link_to "Edit", edit_regret_path(regret), class: "btn btn-default" %>
+              <%= link_to 'Destroy', regret, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-default" %>
             <% end %>
           </div>
         </div>
