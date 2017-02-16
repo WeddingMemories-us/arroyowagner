@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'registry/index'
+
   resources :guestbooks
   resources :regrets
   devise_for :users, controllers: {sessions: "users/sessions", registrations: "users/registrations"}

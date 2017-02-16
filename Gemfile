@@ -30,6 +30,9 @@ gem 'humanize_boolean'
 gem 'devise'
 gem 'cancancan'
 
+#paypal donations
+gem 'paypal', '~> 2.0'
+
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
 # Turbolinks makes navigating your web application faster. Read more: https://github.com/turbolinks/turbolinks
