@@ -1,74 +1,73 @@
-<!DOCTYPE html>
+<!DOCTYPE HTML>
 <html>
-  <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-	<style type="text/css">
-	    /* /\/\/\/\/\/\/\/\/ RESET STYLES /\/\/\/\/\/\/\/\/ */
-	    body{
-	        margin:0;
-	        padding:0;
-	    }
+	<head>
+		<style type="text/css">
+		    /* /\/\/\/\/\/\/\/\/ RESET STYLES /\/\/\/\/\/\/\/\/ */
+		    body{
+		        margin:0;
+		        padding:0;
+		    }
 
-	    img{
-	        border:0 none;
-	        height:auto;
-	        line-height:100%;
-	        outline:none;
-	        text-decoration:none;
-	    }
+		    img{
+		        border:0 none;
+		        height:auto;
+		        line-height:100%;
+		        outline:none;
+		        text-decoration:none;
+		    }
 
-	    a img{
-	        border:0 none;
-	    }
+		    a img{
+		        border:0 none;
+		    }
 
-	    .imageFix{
-	        display:block;
-	    }
+		    .imageFix{
+		        display:block;
+		    }
 
-	    table, td{
-	        border-collapse:collapse;
-	    }
+		    table, td{
+		        border-collapse:collapse;
+		    }
 
-	    #bodyTable{
-	        height:100% !important;
-	        margin:0;
-	        padding:0;
-	        width:100% !important;
-	    }
-	</style>    
-  </head>
+		    #bodyTable{
+		        height:100% !important;
+		        margin:0;
+		        padding:0;
+		        width:100% !important;
+		    }
+		</style>
 
-  <body>
-  	<div>
+		<style type="text/css">
+			td, tr, img  { padding: 0px; margin: 0px; border: none;}
+			table { border-collapse: collapse; }
+		</style>
+	</head>
+	<body>
 		<table>
-			<tr style="height:50px;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+			<tr><td colspan="3"><img src="https://image.ibb.co/nR7d0a/letter_top.png"></td></tr>
 			<tr>
-				<td style="width:10%;">&nbsp;</td>
-				<td>
-					<div style="width:100%; -moz-box-shadow: inset 0 0 50px #80d7d7; -webkit-box-shadow: inset 0 0 50px #80d7d7; box-shadow: inset 0 0 50px #80d7d7;">
-						<div id="header" style="width:100%; height:50px;">
-							<img style="float:right;" src="http://icons.iconarchive.com/icons/aha-soft/free-large-love/48/Wedding-Rings-icon.png">
-						</div>
-						<div style="width:100%;">
-							<table style="width:100%;">
-								<tr id="body" style="width:100%">
-									<td id="left-spacer" style="width:10%">&nbsp;</td>
-									<td id="content" style="width:80%">
-    									<%= yield %>
-    								</td>
-									<td id="rightspacer" style="width:10%">&nbsp;</td>
-								</tr>
-							</table>
-						</div>
-						<div id="footer" style="width:100%; height:50px; valign:bottom;">
-							<br/>&copy;2017 Wedding Memories
-						</div>
+				<td valign="top"><img src="https://image.ibb.co/mqRtYv/letter_side_left_top.png"></td>
+				<td rowspan="3" style="width: 314px; text-align: justify; text-justify: inter-word;">
+					<div>
+						<img style="float:right; margin:10px;" src="http://icons.iconarchive.com/icons/aha-soft/free-large-love/48/Wedding-Rings-icon.png">
+    					<%= yield %>
+    				</div>
+					<div id="footer" style="width:100%; height:50px; valign:bottom;">
+						<br/>&copy;2017 Wedding Memories
 					</div>
 				</td>
-				<td style="width:10%;">&nbsp;</td>
+				<td valign="top"><img src="https://image.ibb.co/f5WStv/letter_side_right_top.png"></td>
 			</tr>
-			<tr style="height:50px;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+			<tr style="height:100%">
+				<td style="width:125px; height:100%; background-image:url(https://image.ibb.co/jQn0Dv/letter_side_left_bottommiddle.png); background-repeat:repeat-y; valign:top;"><img src="https://image.ibb.co/jQn0Dv/	letter_side_left_middle.png"></td>
+				<td style="width:125px; height:100%; background-image:url(https://image.ibb.co/fTu2RF/letter_side_right_middle.png); background-repeat:repeat-y; valign:top;"><img src="https://image.ibb.co/fTu2RF/letter_side_right_middle.png"></td>
+			</tr>
+			<tr>
+				<td valign="bottom"><img src="https://image.ibb.co/dxRGmF/letter_side_left_bottom.png"></td>
+				<td valign="bottom"><img src="https://image.ibb.co/hWa96F/letter_side_right_bottom.png"></td>
+			</tr>
+			<tr>
+				<td colspan="3"><img src="https://image.ibb.co/m4KDYv/letter_bottom.png"></td>
+			</tr>
 		</table>
-	</div>
-  </body>
+	</body>
 </html>
