@@ -8,6 +8,7 @@ class OwnersMailer < ApplicationMailer
   #   en.owners_mailer.rsvp.subject
   #
   def rsvp
+    @user = user
     mail(:to => 'admin@weddingmemories.us', :subject => 'New RSVP recieved')
   end
 
